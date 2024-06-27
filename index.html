@@ -17,9 +17,28 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/colors.css">
     <link rel="stylesheet" href="/google-fonts.css">
+
+    <script>
+      function goToHomePage() {
+        const loginPage = document.getElementById('login_page');
+        loginPage.style.display = 'none'
+
+        const homePage = document.getElementById('home_page');
+        homePage.style.display = 'block'
+      }
+      
+      function goToLoginPage() {
+        const loginPage = document.getElementById('login_page');
+        loginPage.style.display = 'block'
+        
+        const homePage = document.getElementById('home_page');
+        homePage.style.display = 'none'
+      }
+    </script>
   </head>
   <body class="gradient-background">
-    <div class="container">
+    <!-- LOGIN PAGE -->
+    <div id="login_page" class="container">
       <div class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
 
         <h1 class="display-3 cinzel-black baby-blue">Fintech</h1>    
@@ -47,8 +66,34 @@
           </div>
           
           <div class="row">
-            <button type="submit" class="btn btn-primary col mx-3">Login</button>
+            <button type="submit" class="btn btn-primary col mx-3" onclick="goToHomePage()">Login</button>
             <button type="submit" class="btn btn-secondary col mx-3">Cadastrar-se</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HOME PAGE -->
+    <div id="home_page" class="container" style="display: none">
+      <div class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+
+        <h1 class="display-3 cinzel-black baby-blue mb-5">Dashboard</h1>
+
+        <div class="col-11 col-sm-10 col-md-8 col-lg-6 align-self-center text-start translucent-background p-4 rounded">
+          <div class="my-4">
+            <h2 class="navy-blue">Receitas</h2>
+            <p class="fs-1 baby-blue">+ R$15.400,00</p>
+          </div>
+
+          <div class="my-4 mb-5">
+            <h2 class="navy-blue">Despesas</h2>
+            <p class="fs-1 baby-blue">- R$6.200,00</p>
+          </div>
+
+          <div class="row">
+            <button type="submit" class="btn btn-warning col mx-3">Adicionar registro</button>
+            <button type="submit" class="btn btn-danger col mx-3" onclick="goToLoginPage()">Sair</button>
           </div>
         </div>
 
