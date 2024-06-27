@@ -1,0 +1,9 @@
+# PROJETO FINTECH - FIAP
+
+## AUTOR
+
+Thiago Henrique Assi
+
+RM 555570
+
+Turma 1TDSOB-2024
